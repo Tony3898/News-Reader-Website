@@ -1,0 +1,323 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --main-bg-color: #FBF8EF;
+    --second-bg-color: #353E4A;
+    --accent-color: #04D0D9;
+    --second-accent-color: #9ACB34;
+}
+
+.active
+{
+    display: flex;
+}
+.notactive
+{
+    display: none;
+}
+
+body, html {
+    background: var(--main-bg-color);
+    font-family: 'Coiny', cursive;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+.search-box
+{
+    justify-content: center;
+    align-items: center;
+    background: rgba(53,62,74,0.5);
+    width: 100%;
+}
+.search-box-form
+{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+.search-box-form input
+{
+    width: 50%;
+    border: snow;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.search-box-span
+{
+    width: 5%;
+    display: flex;
+    font-size: large;
+    margin-right: 8px;
+    color: red;
+    justify-content: flex-end;
+    align-items: end;
+    cursor: pointer;
+}
+
+.head {
+    background: url("../image/img1.jpg") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: var(--second-bg-color);
+}
+
+.head-nav {
+    background: rgba(53,62,74,0.5);
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+.head-nav nav {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.head-nav nav ul {
+    width: 100%;
+    height: available;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: larger;
+}
+
+.head-nav nav ul li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.head-nav nav ul li a:hover,.activelink:hover {
+    color: var(--second-accent-color);
+    cursor: pointer;
+}
+
+.head-nav nav ul li a {
+    color: var(--main-bg-color);
+    text-decoration: none;
+}
+.activelink
+{
+    color: var(--accent-color);
+}
+
+.head-head {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.head-head div {
+    background: var(--main-bg-color);
+    padding: 8px;
+    border: 6px solid var(--second-bg-color);
+    border-radius: 10px;
+}
+
+.head-head p {
+    text-align: center;
+    color: var(--second-bg-color);
+}
+
+.topheadlines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    background: var(--second-accent-color);
+}
+
+.topheadlines h1 {
+    display: flex;
+    font-family: 'Coiny', cursive;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    color: var(--main-bg-color);
+    border-bottom: 2px solid var(--second-bg-color);
+}
+
+.headlinescontent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 5px;
+}
+
+.card-text {
+    text-overflow: clip;
+    overflow: hidden;
+    height: 100px;
+    width: 100%;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+@media screen and (max-width: 600px) {
+    .head-nav nav ul li a {
+        font-size: larger;
+    }
+}
+
+.news-point {
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    scroll-behavior: smooth;
+    background: var(--accent-color);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.news-point h1 {
+    display: flex;
+    font-family: 'Coiny', cursive;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    color: var(--second-bg-color);
+    border-bottom: 2px solid var(--second-bg-color);
+}
+
+.newsbuttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 5px auto;
+    border: 5px solid var(--second-bg-color);
+    background: var(--main-bg-color);
+}
+
+.newsbuttons button {
+    background: none;
+    padding: 8px;
+    border: none;
+}
+
+.newsbuttons button:hover,.newsbuttons button:focus {
+    color: var(--accent-color);
+    border: none;
+    background: none;
+}
+
+.media {
+    background: var(--main-bg-color);
+    padding: 16px;
+    border-radius: 5px;
+}
+
+.list-unstyled {
+    height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.list-unstyled li {
+    margin: 5px;
+}
+
+.list-unstyled li img {
+    width: 100px;
+    height: 100px;
+}
+
+.news-title {
+    color: var(--second-bg-color);
+    font-family: 'Coiny', cursive;
+}
+
+.news-title:hover, .news-image:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+.news-content {
+    color: var(--second-bg-color);
+    font-family: sans-serif;
+    height: 60px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.foot {
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    background: var(--second-bg-color);
+    height: auto;
+}
+.foot-head
+{
+    width: 20%;
+    color: var(--main-bg-color);
+}
+.foot-social
+{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20%;
+    color: var(--main-bg-color);
+
+
+}
+
+.foot-social-links
+{
+    color: var(--main-bg-color);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.foot-social-links a
+{
+    color: var(--main-bg-color);
+    font-size:20px;
+}
+.foot-social-links a:hover
+{
+    color: var(--accent-color);
+}
+.foot-copy
+{
+
+    color: var(--main-bg-color);
+    font-size: 16px;
+    width: 100%;
+    text-decoration: underline;
+}
